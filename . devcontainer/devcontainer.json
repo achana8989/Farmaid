@@ -1,0 +1,10 @@
+{
+  "name": "Farmaid Codespace",
+  "build": { "dockerfile": "Dockerfile" },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "forwardPorts": [19002, 3000],
+  "postCreateCommand": "bash -lc 'cd app && npm install || true; cd ../server && npm install || true'",
+  "remoteUser": "vscode"
+}
